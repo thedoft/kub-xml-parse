@@ -30,7 +30,7 @@ export default {
   async mounted() {
     try {
       const { data } = await axios.get('https://kub-xml-parse.herokuapp.com/');
-      console.log(data);
+      this.data = data;
     } catch {
       this.error = 'Не удалось загрузить информацию';
     }
